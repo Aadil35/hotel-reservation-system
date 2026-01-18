@@ -1,6 +1,7 @@
 package com.hotel.reservation.model;
 
 import java.math.BigDecimal;
+import java.math.RoundingMode;
 import java.util.Objects;
 
 /**
@@ -15,7 +16,7 @@ public class Money {
         validateAmount(amount);
         validateCurrency(currency);
         
-        this.amount = amount.setScale(2, BigDecimal.ROUND_HALF_UP);
+        this.amount = amount.setScale(2, RoundingMode.HALF_UP);
         this.currency = currency.toUpperCase();
     }
 

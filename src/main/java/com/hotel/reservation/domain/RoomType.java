@@ -68,7 +68,7 @@ public class RoomType {
         return new ArrayList<>(quantities);
     }
 
-    void addRoom(Room room) {
+    public void addRoom(Room room) {
         if (room == null) {
             throw new IllegalArgumentException("Room cannot be null");
         }
